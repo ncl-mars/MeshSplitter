@@ -15,7 +15,7 @@ class MS_ViewPanel(bpy.types.Panel):
         scene = context.scene
         layout = self.layout
         row = layout.row()
-        row.label(text= "Init Text (First Commit)")
+        row.label(text= "This is a another breaking Test")
         
 
 
@@ -25,15 +25,15 @@ classes = [
     MS_ViewPanel, 
 ]
 
-# def init():
-#     print("!! -> initializing viewport GUI")
-
 
 def register():
-    print("!! -> registering viewport gui")
+    print("!! -> registering mesh splitter gui")
     for cls in classes:
         bpy.utils.register_class(cls)
     
 def unregister():
     for cls in classes:
         bpy.utils.unregister_class(cls)
+
+
+
