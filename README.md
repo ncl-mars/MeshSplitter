@@ -2,6 +2,8 @@
 
 A Blender add-on to implement few tools to split a mesh in order to be printable part by part
 
+!!!!!! Only blender >4.2 supported !!!!!!
+
 ### Geometry Nodes Prototype
 
 ![overview, xray](readme-data/XRay.png)

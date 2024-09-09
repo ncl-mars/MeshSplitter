@@ -3,12 +3,12 @@ import bpy
 
 
 #--------------------------------------------------------- Main Panel
-class View3DPanel(bpy.types.Panel):
+class MS_ViewPanel(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_category = "Mesh Splitter"
     bl_label = "Mesh Splitter"
-    bl_idname = "VIEW3D_PT_ms_viewport"
+    bl_idname = "MS_PT_view_panel"
 
 
     def draw(self, context):
@@ -22,14 +22,15 @@ class View3DPanel(bpy.types.Panel):
 
 #--------------------------------------------------------- Registrations
 classes = [
-    View3DPanel, 
+    MS_ViewPanel, 
 ]
 
-def init():
-    print("!! -> initializing mesh_splitter")
+# def init():
+#     print("!! -> initializing viewport GUI")
 
 
 def register():
+    print("!! -> registering viewport gui")
     for cls in classes:
         bpy.utils.register_class(cls)
     

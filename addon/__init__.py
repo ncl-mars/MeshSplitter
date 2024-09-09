@@ -11,16 +11,35 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from . import mesh_splitter
+from . import mesh_splitter, preferences
 
 
-mesh_splitter.init()
+modules = (
+    preferences,
+    mesh_splitter,
+)
+
 
 def register():
-    if hasattr(mesh_splitter, 'register'):
-        mesh_splitter.register()
+    for module in modules :
+        if hasattr(module, 'register'):
+            module.register()
+
 
 
 def unregister():
-    if hasattr(mesh_splitter, 'unregister'):
-        mesh_splitter.unregister()
+    for module in modules :
+        if hasattr(module, 'unregister'):
+            module.unregister()
+
+
+
+
+
+
+
+
+    # if hasattr(mesh_splitter, 'unregister'):
+    #     mesh_splitter.unregister()
+    # if hasattr(mesh_splitter, 'register'):
+    #     mesh_splitter.register()
