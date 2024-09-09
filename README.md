@@ -23,9 +23,9 @@ Modifier GUI             |  Node Tree
 
 ### Developpers
 
-The geometry node tree is made to demonstrate to process considered to be implemented into a proper addon
+The geometry node tree is made to demonstrate the process considered to be implemented into a proper addon
 
-To operate the boolean operations, particularly ressource intensive, some python wrapers + cuda modules (?) would probably be much faster.
+To operate the boolean operations, particularly ressource intensive, some python wrappers + cuda modules (?) would probably be much faster.
 
 ### References
 
