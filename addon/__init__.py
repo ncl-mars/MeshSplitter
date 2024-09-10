@@ -11,27 +11,24 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from . import preferences, ui
-
-
-modules = (
-    preferences,
-    ui,
-)
-
-__DEBUG__ = True
-
-# if __DEBUG__:
-#     import importlib
-#     importlib.reload(preferences)
-#     importlib.reload(ui)
+from . import preferences, operators, ui
 
 
 def register():
     preferences.register()
+    operators.register()
     ui.register()
 
 
 def unregister():
     preferences.unregister()
+    operators.unregister()
     ui.unregister()
+
+
+
+
+# if __DEBUG__:
+#     import importlib
+#     importlib.reload(preferences)
+#     importlib.reload(ui)

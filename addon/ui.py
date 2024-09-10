@@ -15,7 +15,9 @@ class MS_ViewPanel(bpy.types.Panel):
         scene = context.scene
         layout = self.layout
         row = layout.row()
-        row.label(text= "This is a another breaking Test")
+        row.label(text= "This is a breaking Test")
+        row = layout.row()
+        row.operator("mesh_splitter.create_splitter")
         
 
 
