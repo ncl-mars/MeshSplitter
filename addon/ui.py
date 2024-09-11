@@ -1,7 +1,6 @@
 import bpy
 
 
-
 #--------------------------------------------------------- Main Panel
 class MS_ViewPanel(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'

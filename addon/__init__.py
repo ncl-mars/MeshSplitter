@@ -11,17 +11,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from . import preferences, operators, ui
+from . import preferences, properties, operators, ui
 
 
 def register():
     preferences.register()
+    properties.register()
     operators.register()
     ui.register()
 
 
 def unregister():
     preferences.unregister()
+    properties.unregister()
     operators.unregister()
     ui.unregister()
 

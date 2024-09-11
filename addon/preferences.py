@@ -53,10 +53,9 @@ class MS_Preferences(AddonPreferences):
         row.prop(self, "assets_path", text="")
 
 
-
 #--------------------------------------------------------- Registration
 classes = [
-    MS_Preferences
+    MS_Preferences,
 ]
 
 def register():
@@ -72,3 +71,36 @@ def unregister():
 
 
 
+
+
+
+
+
+
+
+#________________________________________________________________________ TMP
+
+# addon_prefs = bpy.context.preferences.addons[__package__].preferences 
+# if os.path.exists(addon_prefs.assets_path) :
+#     addon_prefs.assets_loaded = True
+
+# assets_loaded : BoolProperty(
+#     name="Assets Folder",
+#     default = False
+# )
+
+# self["assets_loaded"] = os.path.exists(self["assets_path"])
+
+# class MS_OT_CheckAssets(Operator):
+    
+#     bl_idname = "mesh_spliiter.check_assets"
+#     bl_label = "Check For Loaded Assets"
+#     bl_options = {'REGISTER', 'UNDO'}
+
+#     @classmethod
+#     def poll(cls, context):
+#         print("polling preferences")
+#         return context.object is not None
+
+#     def init(self):
+#         print("init")
