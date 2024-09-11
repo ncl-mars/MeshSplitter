@@ -11,16 +11,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from . import mesh_splitter
+from . import preferences, properties, operators, ui
 
-
-mesh_splitter.init()
 
 def register():
-    if hasattr(mesh_splitter, 'register'):
-        mesh_splitter.register()
+    preferences.register()
+    properties.register()
+    operators.register()
+    ui.register()
 
 
 def unregister():
-    if hasattr(mesh_splitter, 'unregister'):
-        mesh_splitter.unregister()
+    preferences.unregister()
+    properties.unregister()
+    operators.unregister()
+    ui.unregister()
+
+
+
+
+# if __DEBUG__:
+#     import importlib
+#     importlib.reload(preferences)
+#     importlib.reload(ui)

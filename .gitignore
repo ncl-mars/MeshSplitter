@@ -3,6 +3,8 @@
 # Visual Studio cache directory
 .vs/
 .vscode/
+.blender_vscode_development/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
